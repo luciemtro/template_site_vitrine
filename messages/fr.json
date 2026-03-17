@@ -2,5 +2,11 @@
   "Index": {
     "title": "Bienvenue sur la vitrine",
     "description": "Ceci est un template de site."
+  },
+  "Locale_switcher": {
+    "$meta": "Barre de navigation - Changement de langue",
+    "label": "Changement de langue",
+    "locale": "{locale, select, en {\uD83C\uDDEC\uD83C\uDDE7 Anglais} fr {\uD83C\uDDEB\uD83C\uDDF7 Français} other {Unknown}} ",
+    "short_locale": "{locale, select, en {\uD83C\uDDEC\uD83C\uDDE7} fr {\uD83C\uDDEB\uD83C\uDDF7} other {Unknown}} "
   }
 }
