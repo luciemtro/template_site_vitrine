@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import "@/app/globals.css";
+import type { Locale } from "@/app/types/i18n";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,9 +14,8 @@ export default async function RootLayout({
   params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { locale: Locale };
 }) {
-  // On récupère les messages côté serveur
   const messages = await getMessages();
 
   return (

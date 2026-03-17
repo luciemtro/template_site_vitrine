@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 
 export default function HomePage() {
-  // 'Index' correspond à la clé principale de ton fichier JSON
   const t = useTranslations("Index");
 
   return (

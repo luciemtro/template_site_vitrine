@@ -1,13 +1,18 @@
-import createMiddleware from 'next-intl/middleware';
+import createMiddleware from "next-intl/middleware";
+import { locales } from "@/app/types/i18n";
 
 export default createMiddleware({
-    // Liste des langues supportées
-    locales: ['fr', 'en'],
-    // Langue par défaut si l'utilisateur arrive sur monsite.com/
-    defaultLocale: 'fr'
+  // Liste des langues supportées
+  locales: locales,
+  defaultLocale: "fr",
 });
 
 export const config = {
-    // Applique le middleware sur toutes les pages sauf les fichiers statiques et les API
-    matcher: ['/', '/(fr|en)/:path*']
+  matcher: [
+    // Applique le middleware à toutes les requêtes SAUF :
+    // - Les routes d'API (/api/...)
+    // - Les fichiers internes de Next.js (/_next/...)
+    // - Les fichiers statiques avec une extension (comme favicon.ico, .css, .png, etc.)
+    "/((?!api|_next|.*\\..*).*)",
+  ],
 };
