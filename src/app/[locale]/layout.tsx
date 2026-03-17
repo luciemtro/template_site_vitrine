@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import "@/app/globals.css";
+import NavBar from "@/components/NavBar";
 import type { Locale } from "@/i18n/routing";
 
 export const metadata: Metadata = {
@@ -22,7 +23,8 @@ export default async function RootLayout({
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <NavBar />
+          <main className="min-h-screen">{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

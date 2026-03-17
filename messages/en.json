@@ -8,5 +8,10 @@
     "label": "Changement de langue",
     "locale": "{locale, select, en {\uD83C\uDDEC\uD83C\uDDE7 Anglais} fr {\uD83C\uDDEB\uD83C\uDDF7 Français} other {Unknown}} ",
     "short_locale": "{locale, select, en {\uD83C\uDDEC\uD83C\uDDE7} fr {\uD83C\uDDEB\uD83C\uDDF7} other {Unknown}} "
+  },
+  "Navigation": {
+    "$meta": "Barre de navigation - Liens",
+    "home": "Home",
+    "contact": "Contact"
   }
 }
