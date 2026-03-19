@@ -12,7 +12,7 @@ type Props = {
 
 export default function LocaleSwitcherItem({ children, locale }: Props) {
   const router = useRouter()
-  const [isPending, startTransition] = useTransition()
+  const [_, startTransition] = useTransition()
   const pathname = usePathname()
   const params = useParams()
 
