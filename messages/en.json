@@ -13,5 +13,86 @@
     "$meta": "Barre de navigation - Liens",
     "home": "Home",
     "contact": "Contact"
+  },
+  "Legal": {
+    "$meta": "Page des mentions légales",
+    "title": "Mentions légales",
+    "intro": "Texte d’introduction pour expliquer les mentions légales du site et rassurer l’utilisateur.",
+    "company": {
+      "title": "Informations sur l’entreprise",
+      "content": "Nom de l’entreprise : [À compléter]\nAdresse : [À compléter]\nNuméro d’entreprise : [À compléter]\nEmail de contact : [À compléter]"
+    },
+    "hosting": {
+      "title": "Hébergement",
+      "content": "Nom de l’hébergeur : [À compléter]\nAdresse : [À compléter]\nSite web : [À compléter]"
+    },
+    "liability": {
+      "title": "Responsabilité",
+      "content": "Texte pour expliquer la responsabilité du site, les limitations et l’utilisation des informations proposées."
+    },
+    "intellectual": {
+      "title": "Propriété intellectuelle",
+      "content": "Texte pour expliquer les droits d’auteur, les contenus protégés et les conditions d’utilisation."
+    }
+  },
+  "Privacy": {
+    "title": "Politique de confidentialité",
+    "intro": "Explique ici comment les données sont collectées et utilisées.",
+    "data": {
+      "title": "Données collectées",
+      "content": "Texte pour expliquer quelles données sont collectées."
+    },
+    "usage": {
+      "title": "Utilisation des données",
+      "content": "Texte pour expliquer comment les données sont utilisées."
+    },
+    "rights": {
+      "title": "Droits des utilisateurs",
+      "content": "Texte pour expliquer les droits (RGPD)."
+    }
+  },
+  "Terms": {
+    "title": "Conditions générales",
+    "intro": "Explique les règles d'utilisation du site.",
+    "use": {
+      "title": "Utilisation",
+      "content": "Conditions d'utilisation du site."
+    },
+    "responsibility": {
+      "title": "Responsabilité",
+      "content": "Limites de responsabilité."
+    }
+  },
+  "Cookies": {
+    "title": "Politique de cookies",
+    "intro": "Explique l'utilisation des cookies.",
+    "what": {
+      "title": "Qu’est-ce qu’un cookie ?",
+      "content": "Définition des cookies."
+    },
+    "manage": {
+      "title": "Gestion des cookies",
+      "content": "Comment gérer ou refuser les cookies."
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Une question ou un projet ? Contactez-nous.",
+    "form": {
+      "name": "Votre nom",
+      "email": "Votre email",
+      "message": "Votre message",
+      "submit": "Envoyer",
+      "sending": "Envoi..."
+    },
+    "success": "Votre message a bien été envoyé.",
+    "errors": {
+      "missing_fields": "Veuillez remplir tous les champs.",
+      "invalid_name": "Nom invalide.",
+      "invalid_email": "Email invalide.",
+      "message_too_short": "Message trop court.",
+      "message_too_long": "Message trop long.",
+      "server_error": "Erreur serveur, réessayez."
+    }
   }
 }

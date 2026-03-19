@@ -3,6 +3,11 @@ import type { getPathname } from "@/i18n/navigation";
 
 export const pathnames = {
   "/": "/",
+  "/legal": "/legal",
+  "/privacy": "/privacy",
+  "/contact": "/contact",
+  "/terms": "/terms",
+  "/cookies": "/cookies",
 } as const;
 
 export type Pathnames = keyof typeof pathnames;
