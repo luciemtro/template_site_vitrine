@@ -1,5 +1,5 @@
 function escapeHtml(str: string) {
-  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
 }
 
 const translations = {
@@ -15,16 +15,16 @@ const translations = {
     text: "We received your message and will reply shortly.",
     end: "Best regards",
   },
-};
+}
 
 export function contactUserTemplate({
   name,
   locale,
 }: {
-  name: string;
-  locale: string;
+  name: string
+  locale: string
 }) {
-  const t = translations[locale as "fr" | "en"] || translations.fr;
+  const t = translations[locale as "fr" | "en"] || translations.fr
 
   return `
     <div style="font-family: Arial, sans-serif; background:#f9f9f9; padding:40px;">
@@ -42,5 +42,5 @@ export function contactUserTemplate({
 
       </div>
     </div>
-  `;
+  `
 }

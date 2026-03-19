@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { faScaleBalanced } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTranslations } from "next-intl";
+import { faScaleBalanced } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useTranslations } from "next-intl"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/components/ui/accordion"
 
 export default function LegalPage() {
-  const t = useTranslations("Legal");
+  const t = useTranslations("Legal")
 
   return (
     <main className="section-padding">
@@ -60,5 +60,5 @@ export default function LegalPage() {
         </Accordion>
       </div>
     </main>
-  );
+  )
 }

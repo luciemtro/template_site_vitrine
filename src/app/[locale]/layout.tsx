@@ -1,23 +1,23 @@
-import type { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import "@/app/globals.css";
+import type { Metadata } from "next"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages } from "next-intl/server"
+import "@/app/globals.css"
 
-import { Inter, Poppins } from "next/font/google";
-import { Toaster } from "sonner";
-import NavBar from "@/components/NavBar";
-import type { Locale } from "@/i18n/routing";
+import { Inter, Poppins } from "next/font/google"
+import { Toaster } from "sonner"
+import NavBar from "@/components/NavBar"
+import type { Locale } from "@/i18n/routing"
 
 const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-});
+})
 
 const fontHeading = Poppins({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-heading",
-});
+})
 
 export const metadata: Metadata = {
   /* =========================================================
@@ -76,18 +76,18 @@ export const metadata: Metadata = {
   ========================================================= */
 
   metadataBase: new URL("https://tonsite.com"),
-};
+}
 
 export default async function RootLayout({
   children,
   params,
 }: {
-  children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  children: React.ReactNode
+  params: Promise<{ locale: Locale }>
 }) {
-  const { locale } = await params;
+  const { locale } = await params
 
-  const messages = await getMessages({ locale });
+  const messages = await getMessages({ locale })
 
   return (
     <html
@@ -102,5 +102,5 @@ export default async function RootLayout({
         </NextIntlClientProvider>
       </body>
     </html>
-  );
+  )
 }

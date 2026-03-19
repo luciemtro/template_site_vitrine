@@ -14,10 +14,24 @@
     "indentStyle": "space",
     "indentWidth": 2
   },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded"
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off"
+      },
+      "performance": {
+        "noImgElement": "off"
+      },
       "suspicious": {
         "noUnknownAtRules": "off"
       }

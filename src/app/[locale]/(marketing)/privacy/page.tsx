@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTranslations } from "next-intl";
+import { faShieldHalved } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useTranslations } from "next-intl"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/components/ui/accordion"
 
 export default function PrivacyPage() {
-  const t = useTranslations("Privacy");
+  const t = useTranslations("Privacy")
 
   return (
     <main className="section-padding">
@@ -47,5 +47,5 @@ export default function PrivacyPage() {
         </Accordion>
       </div>
     </main>
-  );
+  )
 }

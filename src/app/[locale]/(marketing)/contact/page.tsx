@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { useLocale, useTranslations } from "next-intl";
-import { useTransition } from "react";
-import { toast } from "sonner";
-import { sendContact } from "@/app/actions/contact";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { useLocale, useTranslations } from "next-intl"
+import { useTransition } from "react"
+import { toast } from "sonner"
+import { sendContact } from "@/app/actions/contact"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function ContactPage() {
-  const locale = useLocale();
-  const t = useTranslations("Contact");
-  const [pending, startTransition] = useTransition();
+  const locale = useLocale()
+  const t = useTranslations("Contact")
+  const [pending, startTransition] = useTransition()
 
   return (
     <main className="section-padding">
@@ -24,17 +24,17 @@ export default function ContactPage() {
           className="mt-8 space-y-4"
           action={(formData) =>
             startTransition(async () => {
-              formData.append("locale", locale);
+              formData.append("locale", locale)
 
-              const res = await sendContact(formData);
+              const res = await sendContact(formData)
 
               if (res?.success) {
-                toast.success(t("success"));
-                (document.activeElement as HTMLElement)
+                toast.success(t("success"))
+                ;(document.activeElement as HTMLElement)
                   ?.closest("form")
-                  ?.reset();
+                  ?.reset()
               } else {
-                toast.error(t(`errors.${res?.error || "server_error"}`));
+                toast.error(t(`errors.${res?.error || "server_error"}`))
               }
             })
           }
@@ -56,5 +56,5 @@ export default function ContactPage() {
         </form>
       </div>
     </main>
-  );
+  )
 }

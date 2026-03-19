@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { faCookieBite } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTranslations } from "next-intl";
+import { faCookieBite } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useTranslations } from "next-intl"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/components/ui/accordion"
 
 export default function CookiesPage() {
-  const t = useTranslations("Cookies");
+  const t = useTranslations("Cookies")
 
   return (
     <main className="section-padding">
@@ -40,5 +40,5 @@ export default function CookiesPage() {
         </Accordion>
       </div>
     </main>
-  );
+  )
 }

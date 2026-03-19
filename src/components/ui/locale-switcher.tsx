@@ -1,17 +1,17 @@
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl"
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import LocaleSwitcherItem from "@/components/ui/locale-switcher-item";
-import { type Locale, locales } from "@/i18n/routing";
+} from "@/components/ui/dropdown-menu"
+import LocaleSwitcherItem from "@/components/ui/locale-switcher-item"
+import { type Locale, locales } from "@/i18n/routing"
 
 export default function LocaleSwitcher() {
-  const t = useTranslations("Locale_switcher");
-  const locale = useLocale();
+  const t = useTranslations("Locale_switcher")
+  const locale = useLocale()
 
   return (
     <DropdownMenu>
@@ -29,5 +29,5 @@ export default function LocaleSwitcher() {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

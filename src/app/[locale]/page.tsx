@@ -1,9 +1,9 @@
-import { faArrowRightLong, faGift } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTranslations } from "next-intl";
+import { faArrowRightLong, faGift } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useTranslations } from "next-intl"
 
 export default function HomePage() {
-  const t = useTranslations("Index");
+  const t = useTranslations("Index")
 
   return (
     <main>
@@ -12,5 +12,5 @@ export default function HomePage() {
       <p>{t("description")}</p>
       <FontAwesomeIcon icon={faArrowRightLong} className="w-6" />
     </main>
-  );
+  )
 }

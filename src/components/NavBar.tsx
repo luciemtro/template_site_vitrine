@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import LocaleSwitcher from "@/components/ui/locale-switcher";
+import Link from "next/link"
+import { useTranslations } from "next-intl"
+import LocaleSwitcher from "@/components/ui/locale-switcher"
 
 export default function NavBar() {
   // On charge les traductions spécifiques à la navigation
-  const t = useTranslations("Navigation");
+  const t = useTranslations("Navigation")
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-white/70 backdrop-blur-lg dark:border-gray-800/50 dark:bg-neutral-950/70">
@@ -41,7 +41,6 @@ export default function NavBar() {
             type="button"
             className="md:hidden p-2 text-gray-500 hover:text-foreground"
           >
-            {/** biome-ignore lint/a11y/noSvgWithoutTitle: <no> */}
             <svg
               className="h-6 w-6"
               fill="none"
@@ -59,5 +58,5 @@ export default function NavBar() {
         </div>
       </div>
     </header>
-  );
+  )
 }

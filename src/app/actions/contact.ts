@@ -1,71 +1,71 @@
-"use server";
+"use server"
 
-import { Resend } from "resend";
-import { contactAdminTemplate } from "@/app/emails/contact-admin";
-import { contactUserTemplate } from "@/app/emails/contact-user";
-import { env } from "@/lib/env";
+import { Resend } from "resend"
+import { contactAdminTemplate } from "@/app/emails/contact-admin"
+import { contactUserTemplate } from "@/app/emails/contact-user"
+import { env } from "@/lib/env"
 
 // 🔒 sécurité env
 if (!process.env.RESEND_API_KEY) {
-  throw new Error("Missing RESEND_API_KEY");
+  throw new Error("Missing RESEND_API_KEY")
 }
 
 if (!process.env.CONTACT_FROM_EMAIL || !process.env.CONTACT_EMAIL) {
-  throw new Error("Missing email config");
+  throw new Error("Missing email config")
 }
 
-const resend = new Resend(env.RESEND_API_KEY);
+const resend = new Resend(env.RESEND_API_KEY)
 
 // 🔒 validation email
 function isValidEmail(email: string) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 
 // 🔒 sécuriser locale
 function getSafeLocale(locale: string) {
-  return ["fr", "en"].includes(locale) ? locale : "fr";
+  return ["fr", "en"].includes(locale) ? locale : "fr"
 }
 
 export async function sendContact(formData: FormData) {
   try {
-    const rawLocale = String(formData.get("locale") || "fr");
-    const locale = getSafeLocale(rawLocale);
+    const rawLocale = String(formData.get("locale") || "fr")
+    const locale = getSafeLocale(rawLocale)
 
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const message = String(formData.get("message") || "").trim();
+    const name = String(formData.get("name") || "").trim()
+    const email = String(formData.get("email") || "").trim()
+    const message = String(formData.get("message") || "").trim()
 
     // 🧠 validations
     if (!name || !email || !message) {
-      return { error: "missing_fields" };
+      return { error: "missing_fields" }
     }
 
     if (name.length < 2) {
-      return { error: "invalid_name" };
+      return { error: "invalid_name" }
     }
 
     if (!isValidEmail(email)) {
-      return { error: "invalid_email" };
+      return { error: "invalid_email" }
     }
 
     if (message.length < 10) {
-      return { error: "message_too_short" };
+      return { error: "message_too_short" }
     }
 
     if (message.length > 2000) {
-      return { error: "message_too_long" };
+      return { error: "message_too_long" }
     }
 
     // 🌍 sujets multi-langue
     const subjects = {
       fr: `Nouveau message de ${name}`,
       en: `New message from ${name}`,
-    };
+    }
 
     const autoReplySubjects = {
       fr: "Nous avons bien reçu votre message",
       en: "We received your message",
-    };
+    }
 
     // 📩 ADMIN
     await resend.emails.send({
@@ -79,7 +79,7 @@ export async function sendContact(formData: FormData) {
         message,
         locale,
       }),
-    });
+    })
 
     // 📩 CLIENT
     if (env.CONTACT_AUTO_REPLY) {
@@ -91,12 +91,12 @@ export async function sendContact(formData: FormData) {
           name,
           locale,
         }),
-      });
+      })
     }
 
-    return { success: true };
+    return { success: true }
   } catch (error) {
-    console.error("CONTACT ERROR:", error);
-    return { error: "server_error" };
+    console.error("CONTACT ERROR:", error)
+    return { error: "server_error" }
   }
 }

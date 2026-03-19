@@ -1,5 +1,5 @@
 function escapeHtml(str: string) {
-  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
 }
 
 const translations = {
@@ -17,7 +17,7 @@ const translations = {
     message: "Message",
     footer: "Sent from contact form",
   },
-};
+}
 
 export function contactAdminTemplate({
   name,
@@ -25,12 +25,12 @@ export function contactAdminTemplate({
   message,
   locale,
 }: {
-  name: string;
-  email: string;
-  message: string;
-  locale: string;
+  name: string
+  email: string
+  message: string
+  locale: string
 }) {
-  const t = translations[locale as "fr" | "en"] || translations.fr;
+  const t = translations[locale as "fr" | "en"] || translations.fr
 
   return `
     <div style="font-family: Arial, sans-serif; background:#f9f9f9; padding:40px;">
@@ -54,5 +54,5 @@ export function contactAdminTemplate({
 
       </div>
     </div>
-  `;
+  `
 }
