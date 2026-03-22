@@ -7,6 +7,7 @@ import { Inter, Poppins } from "next/font/google"
 import { Toaster } from "sonner"
 import NavBar from "@/components/NavBar"
 import type { Locale } from "@/i18n/routing"
+import ZodI18nProvider from "@/components/zod/ZodI18nProvider";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -96,9 +97,11 @@ export default async function RootLayout({
     >
       <body>
         <NextIntlClientProvider messages={messages}>
-          <NavBar />
-          <main className="min-h-screen">{children}</main>
-          <Toaster />
+          <ZodI18nProvider>
+            <NavBar />
+            <main className="min-h-screen">{children}</main>
+            <Toaster />
+          </ZodI18nProvider>
         </NextIntlClientProvider>
       </body>
     </html>
