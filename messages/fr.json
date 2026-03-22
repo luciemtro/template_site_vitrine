@@ -79,9 +79,9 @@
     "title": "Contact",
     "subtitle": "Une question ou un projet ? Contactez-nous.",
     "form": {
-      "name": "Votre nom",
-      "email": "Votre email",
-      "message": "Votre message",
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
       "submit": "Envoyer",
       "sending": "Envoi..."
     },

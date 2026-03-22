@@ -1,6 +1,4 @@
-function escapeHtml(str: string) {
-  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-}
+import {escapeHtml} from "@/lib/utils";
 
 const translations = {
   fr: {
