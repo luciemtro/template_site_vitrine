@@ -58,25 +58,43 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
+  /* ← AJOUT */
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-nav-bg: var(--nav-bg);
+  --color-nav-border: var(--nav-border);
+  --color-cta-bg: var(--cta-bg);
+  --color-cta-text: var(--cta-text);
+
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
 
   --radius-lg: var(--radius);
 }
 
-/* =========================================================
-   🌞 LIGHT MODE
-========================================================= */
-
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background-primary: oklch(97.842% 0.01071 286.053);
+  --text-primary: oklch(0.205 0 0);
 
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+  --background-secondary: oklch(29.512% 0.00901 285.789);
+  --text-secondary: oklch(0.985 0 0);
 
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --background-action: linear-gradient(
+    135deg,
+    oklch(50% 0.3 20),
+    oklch(65% 0.2 50)
+  );
+  --background-action-hover: linear-gradient(
+    135deg,
+    oklch(65% 0.2 50),
+    oklch(50% 0.3 20)
+  );
+  --text-action: oklch(0.205 0 0);
+  --text-action-hover: oklch(96.569% 0.00211 14.336);
+
+  --color-action: oklch(50% 0.3 20);
+  --color-action-hover: oklch(35.18% 0.13708 28.131);
 
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -86,11 +104,19 @@
   --ring: oklch(0.708 0 0);
 
   --radius: 0.75rem;
-}
 
-/* =========================================================
-   🌙 DARK MODE
-========================================================= */
+  /* NAVBAR */
+  --nav-bg: color-mix(in oklab, var(--background) 70%, transparent);
+  --nav-border: color-mix(in oklab, var(--foreground) 10%, transparent);
+
+  /* CTA */
+  --cta-bg: var(--foreground);
+  --cta-text: var(--background);
+
+  /* 🎨 ACCENT — change uniquement cette ligne pour recolorer tout le site */
+  --accent: oklch(0.55 0.22 250); /* Bleu */
+  --accent-foreground: oklch(1 0 0); /* Texte sur accent (blanc) */
+}
 
 .dark {
   --background: oklch(0.145 0 0);
@@ -108,6 +134,10 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
+
+  /* ACCENT dark — légèrement plus clair pour contraste */
+  --accent: oklch(0.65 0.2 250);
+  --accent-foreground: oklch(1 0 0);
 }
 
 /* =========================================================
@@ -121,6 +151,7 @@
 
   html {
     @apply font-sans;
+    scrollbar-gutter: stable;
   }
 
   body {

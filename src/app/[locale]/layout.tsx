@@ -5,9 +5,10 @@ import "@/app/globals.css"
 
 import { Inter, Poppins } from "next/font/google"
 import { Toaster } from "sonner"
+import Footer from "@/components/Footer"
 import NavBar from "@/components/NavBar"
+import ZodI18nProvider from "@/components/zod/ZodI18nProvider"
 import type { Locale } from "@/i18n/routing"
-import ZodI18nProvider from "@/components/zod/ZodI18nProvider";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -99,8 +100,9 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <ZodI18nProvider>
             <NavBar />
-            <main className="min-h-screen">{children}</main>
+            <main className="min-h-screen pt-20">{children}</main>
             <Toaster />
+            <Footer />
           </ZodI18nProvider>
         </NextIntlClientProvider>
       </body>

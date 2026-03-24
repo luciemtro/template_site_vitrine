@@ -4,6 +4,7 @@ import type { getPathname } from "@/i18n/navigation"
 export const pathnames = {
   "/": "/",
   "/legal": "/legal",
+  "/about": "/about",
   "/privacy": "/privacy",
   "/contact": "/contact",
   "/terms": "/terms",

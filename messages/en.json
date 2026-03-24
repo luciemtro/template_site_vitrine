@@ -12,7 +12,8 @@
   "Navigation": {
     "$meta": "Barre de navigation - Liens",
     "home": "Home",
-    "contact": "Contact"
+    "contact": "Contact",
+    "about" : "About"
   },
   "Legal": {
     "$meta": "Page des mentions légales",
@@ -206,6 +207,82 @@
       "never": "never",
       "map": "map",
       "set": "set"
+    }
+  },
+  "Footer": {
+    "$meta": "Pied de page - Liens",
+    "links": [
+      { "label": "Accueil", "href": "/" },
+      { "label": "Mentions légales", "href": "/legal" },
+      { "label": "Politique de confidentialité", "href": "/privacy" }
+    ],
+    "tagline": "Créateur d'expériences web modernes et accessibles.",
+    "navigation": "Navigation",
+    "connect": "Contact",
+    "cta": "Me contacter",
+    "rights": "Tous droits réservés.",
+    "madeWith": "Fait avec",
+    "and": "et"
+  },
+  "About": {
+    "meta": {
+      "title": "[Titre de l'onglet — ex: À propos — Acme]",
+      "description": "[Description SEO — ex: Découvrez qui nous sommes, notre histoire et nos valeurs.]"
+    },
+    "hero": {
+      "eyebrow": "[Petit texte au-dessus du titre — ex: Qui sommes-nous]",
+      "title": "[Titre principal — ex: On construit ce qui vous ressemble]",
+      "description": "[Phrase d'accroche — ex: Une équipe passionnée, des projets concrets, une obsession : livrer ce qui marche vraiment.]"
+    },
+    "story": {
+      "title": "[Titre de la section histoire — ex: Notre histoire]",
+      "p1": "[Paragraphe 1 — les origines, pourquoi vous avez lancé ce projet]",
+      "p2": "[Paragraphe 2 — la philosophie, ce qui vous différencie]"
+    },
+    "stats": {
+      "s1": { "label": "[Stat 1 — ex: Année de création]" },
+      "s2": { "label": "[Stat 2 — ex: Projets livrés]" },
+      "s3": { "label": "[Stat 3 — ex: Clients satisfaits]" }
+    },
+    "values": {
+      "title": "[Titre de la section valeurs — ex: Ce en quoi on croit]",
+      "subtitle": "[Sous-titre — ex: Pas des buzzwords. Des principes appliqués chaque jour.]",
+      "v1": {
+        "icon": "[Emoji — ex: ⚡]",
+        "label": "[Valeur 1 — ex: Rapidité]",
+        "desc": "[Description valeur 1 — ex: On livre vite sans bâcler. Votre temps a de la valeur.]"
+      },
+      "v2": {
+        "icon": "[Emoji — ex: 🎯]",
+        "label": "[Valeur 2 — ex: Précision]",
+        "desc": "[Description valeur 2 — ex: On cadre bien avant de coder. Moins de retours, meilleurs résultats.]"
+      },
+      "v3": {
+        "icon": "[Emoji — ex: 🤝]",
+        "label": "[Valeur 3 — ex: Transparence]",
+        "desc": "[Description valeur 3 — ex: Vous savez où en est votre projet à tout moment. Aucune surprise.]"
+      }
+    },
+    "team": {
+      "title": "[Titre de la section équipe — ex: L'équipe]",
+      "subtitle": "[Sous-titre — ex: Des gens qui font, pas juste qui parlent.]",
+      "m1": {
+        "name": "[Nom membre 1 — ex: Alex Martin]",
+        "role": "[Rôle membre 1 — ex: Fondateur & Développeur]"
+      },
+      "m2": {
+        "name": "[Nom membre 2 — ex: Sarah Dubois]",
+        "role": "[Rôle membre 2 — ex: Design & UX]"
+      },
+      "m3": {
+        "name": "[Nom membre 3 — ex: Thomas Rey]",
+        "role": "[Rôle membre 3 — ex: Stratégie & Croissance]"
+      }
+    },
+    "cta": {
+      "title": "[Titre CTA — ex: Un projet en tête ?]",
+      "subtitle": "[Sous-titre CTA — ex: On répond sous 24h, sans engagement.]",
+      "button": "[Texte du bouton — ex: Nous contacter]"
     }
   }
 }

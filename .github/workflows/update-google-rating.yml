@@ -1,0 +1,17 @@
+# .github/workflows/update-google-rating.yml
+name: Update Google Rating
+
+on:
+  schedule:
+    - cron: '0 8 * * 1' # Chaque lundi à 8h
+  workflow_dispatch: # Déclenchement manuel possible
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch & update rating
+        run: |
+          curl -X POST https://tonsite.com/api/update-rating \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json"
